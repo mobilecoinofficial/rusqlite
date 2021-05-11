@@ -11,9 +11,9 @@ export SQLITE3_INCLUDE_DIR="$SQLITE3_LIB_DIR"
 export SQLCIPHER_LIB_DIR="$SCRIPT_DIR/sqlcipher"
 export SQLCIPHER_INCLUDE_DIR="$SQLCIPHER_LIB_DIR"
 
-# Download and extract sqlite3 amalgamation
-SQLITE=sqlite-amalgamation-3340000
-curl -O "https://sqlite.org/2020/$SQLITE.zip"
+# Download and extract amalgamation
+SQLITE=sqlite-amalgamation-3350400
+curl -O https://sqlite.org/2021/$SQLITE.zip
 unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.c" > "$SQLITE3_LIB_DIR/sqlite3.c"
 unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.h" > "$SQLITE3_LIB_DIR/sqlite3.h"
 unzip -p "$SQLITE.zip" "$SQLITE/sqlite3ext.h" > "$SQLITE3_LIB_DIR/sqlite3ext.h"
